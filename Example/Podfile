@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'RickURLRouter_Example' do
+  pod 'RickURLRouter', :path => '../'
+
+  target 'RickURLRouter_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

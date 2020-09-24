@@ -1,0 +1,6 @@
+framework module RickURLRouter {
+  umbrella header "RickURLRouter-umbrella.h"
+
+  export *
+  module * { export * }
+}

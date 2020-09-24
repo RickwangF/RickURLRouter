@@ -1,0 +1,22 @@
+{
+  "name": "RickURLRouter",
+  "version": "0.1.0",
+  "summary": "A short description of RickURLRouter.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Rick/RickURLRouter",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Rick": "woshiwwy16@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Rick/RickURLRouter.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "RickURLRouter/Classes/**/*"
+}

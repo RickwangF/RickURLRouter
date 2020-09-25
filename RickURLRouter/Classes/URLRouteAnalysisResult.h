@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString* target;
 
+@property (nonatomic, copy) NSURL* url;
+
 @property (nonatomic, copy) NSString* path;
 
 @property (nonatomic, copy) NSDictionary* params;

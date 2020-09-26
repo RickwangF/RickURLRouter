@@ -9,12 +9,13 @@
 
 static NSString* _scheme;
 static NSString* _prefix;
+static NSString* _moduleEntrance;
 static NSMutableDictionary* _fillParams;
 static NSMutableDictionary* _moduleTargets;
 
 @implementation URLRouterSettings
 
-@dynamic scheme, prefix, moduleTargets, fillParams;
+@dynamic scheme, prefix, moduleEntrance, moduleTargets, fillParams;
 
 #pragma mar - Getter && Setter
 
@@ -38,6 +39,17 @@ static NSMutableDictionary* _moduleTargets;
 
 + (void)setPrefix:(NSString *)prefix{
     _prefix = [prefix copy];
+}
+
++ (NSString *)moduleEntrance{
+    if (!_moduleEntrance) {
+        _moduleEntrance = @"index";
+    }
+    return [_moduleEntrance copy];
+}
+
++ (void)setModuleEntrance:(NSString *)moduleEntrance{
+    _moduleEntrance = [moduleEntrance copy];
 }
 
 + (NSMutableDictionary *)moduleTargets{

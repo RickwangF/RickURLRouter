@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy, class) NSString* prefix;
 
+@property (nonatomic, copy, class) NSString* moduleEntrance;
+
 @property (nonatomic, copy, class) NSMutableDictionary* moduleTargets;
 
 @property (nonatomic, copy, class) NSMutableDictionary* fillParams;

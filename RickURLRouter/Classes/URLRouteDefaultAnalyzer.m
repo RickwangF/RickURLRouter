@@ -55,6 +55,7 @@
         return result;
     }
     
+    // HTTP,HTTPS链接
     if ([url.scheme isEqualToString:HTTPScheme] || [url.scheme isEqualToString:HTTPSScheme]) {
         if (![self isValidHttpURL:url]) {
             NSError *error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeInvalidRoute userInfo:@{NSURLErrorKey:@"路由地址不正确"}];
@@ -62,25 +63,110 @@
             return result;
         }
         
-        NSString* urlString = [url absoluteString];
-        if (urlString == nil || [urlString isEqualToString:@""]) {
+        NSString* urlString;
+        if (url.absoluteString == nil || [url.absoluteString isEqualToString:@""]) {
             NSError *error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeInvalidRoute userInfo:@{NSURLErrorKey:@"路由地址不正确"}];
             result.error = error;
             return result;
         }
         
-        NSMutableString* pureHostString, *paramsString;
+        urlString = url.absoluteString.lowercaseString;
+        
+        NSString* schemeHostString, *paramsString;
         NSRange range = [urlString rangeOfString:@"?" options:NSCaseInsensitiveSearch];
-        if (range.location > 0 && range.length == 1) {
-            pureHostString = [[urlString substringToIndex:range.location] mutableCopy];
-            paramsString = [[urlString substringFromIndex:range.location] mutableCopy];
+        if (range.location != NSNotFound) {
+            schemeHostString = [urlString substringToIndex:range.location];
+            paramsString = [urlString substringFromIndex:range.location];
         }
         
         if (paramsString != nil && ![paramsString isEqualToString:@""]) {
             NSDictionary* urlParams = [self fullFillParams:paramsString];
             result.params = [self decodeURLParams:urlParams];
+            NSString* fullFillParamString = [self combineFullFillParams:urlParams];
+            if (fullFillParamString != nil && ![fullFillParamString isEqualToString:@""]) {
+                NSString* fullFillUrlString = [NSString stringWithFormat:@"%@?%@", schemeHostString, fullFillParamString];
+                result.url = [NSURL URLWithString:fullFillUrlString];
+            }
+        } else {
+            result.url = url;
         }
         
+        return result;
+    }
+    
+    // 原生链接
+    if ([url.scheme isEqualToString:URLRouterSettings.scheme]) {
+        
+        NSString* urlString;
+        if (url.absoluteString == nil || [url.absoluteString isEqualToString:@""]) {
+            NSError *error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeInvalidRoute userInfo:@{NSURLErrorKey:@"路由地址不正确"}];
+            result.error = error;
+            return result;
+        }
+        
+        urlString = url.absoluteString.lowercaseString;
+        
+        // 截取路由目标地和参数字符串
+        
+        NSString *pureHostString, *paramsString;
+        if (url.host != nil && ![url.host isEqualToString:@""]) {
+            pureHostString = url.host;
+        }
+        
+        if (pureHostString == nil) {
+            NSError *error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeInvalidRoute userInfo:@{NSURLErrorKey:@"路由地址host不正确"}];
+            result.error = error;
+            return result;
+        }
+        
+        NSRange range = [urlString rangeOfString:@"?" options:NSCaseInsensitiveSearch];
+        if (range.location != NSNotFound) {
+            paramsString = [urlString substringFromIndex:range.location];
+        }
+        
+        // 路由目标地解析
+        NSArray* hostComponentArray = [pureHostString componentsSeparatedByString:@"."];
+        if (hostComponentArray == nil || hostComponentArray.count == 0) {
+            NSError *error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeInvalidRoute userInfo:@{NSURLErrorKey:@"路由地址host不正确"}];
+            result.error = error;
+            return result;
+        }
+        
+        NSString *prefix, *module;
+        NSMutableString *target;
+        if (hostComponentArray.count == 3) {
+            prefix = hostComponentArray[0];
+            module = hostComponentArray[1];
+            target = [hostComponentArray[2] mutableCopy];
+        }
+        
+        if (prefix == nil || [prefix isEqualToString:@""] || ![prefix isEqualToString:URLRouterSettings.prefix]) {
+            NSError *error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeInvalidRoute userInfo:@{NSURLErrorKey:@"路由地址host的prefix不正确"}];
+            result.error = error;
+            return result;
+        }
+        
+        if (module == nil || [module isEqualToString:@""] || URLRouterSettings.moduleTargets[module] == nil) {
+            NSError *error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeInvalidRoute userInfo:@{NSURLErrorKey:@"路由地址host的module不正确"}];
+            result.error = error;
+            return result;
+        }
+        
+        if (target == nil || [target isEqualToString:@""]) {
+            NSError *error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeInvalidRoute userInfo:@{NSURLErrorKey:@"路由地址host的target不正确"}];
+            result.error = error;
+            return result;
+        }
+        
+        if ([target isEqualToString:URLRouterSettings.moduleEntrance]) {
+            target = [@"" mutableCopy];
+        }
+        
+        // 查看路由目标地是否匹配
+        
+        // 解析参数字符串
+        
+        // 实例化路由目标地
     }
     
     return result;
@@ -127,6 +213,14 @@
     return [fullFillParamsDic copy];
 }
 
+- (NSString*)decodeURLString:(NSString*)urlString {
+    if (urlString == nil || [urlString isEqualToString:@""]) {
+        return @"";
+    }
+    
+    return [urlString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];;
+}
+
 - (NSDictionary*)decodeURLParams:(NSDictionary*)dictionary{
     NSMutableDictionary *paramsDic = [NSMutableDictionary dictionary];
     if (paramsDic == nil || paramsDic.count == 0) {
@@ -134,7 +228,7 @@
     }
     
     [dictionary enumerateKeysAndObjectsUsingBlock:^(NSString*  _Nonnull key, NSString*  _Nonnull obj, BOOL * _Nonnull stop) {
-        NSString* decodeValue = [obj stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString* decodeValue = [self decodeURLString:obj];
         [paramsDic setObject:decodeValue forKey:key];
     }];
     return [paramsDic copy];

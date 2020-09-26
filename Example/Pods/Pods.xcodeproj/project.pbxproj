@@ -7,41 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07477D97209F96BF8F3D18612CAAAE96 /* URLRouterConst.h in Headers */ = {isa = PBXBuildFile; fileRef = FB2D4A991A7E3ED801FEE1813E9B8FE0 /* URLRouterConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DB2926E0C1DB087782AA5A7E59DB65C /* RickURLRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C0F71CF05596E3A7DF2A7B48C91BF /* RickURLRouter-dummy.m */; };
-		25CD9ACE941288F6EAB0D63E03E4E27F /* URLRouterUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B23BDB0F4988E0B39FE6AAF83A6390 /* URLRouterUtil.m */; };
-		33CAE348A4C414841733A6342A19F2C1 /* RickURLRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 695D73D31AB47ED4B1EE79B80A57A10E /* RickURLRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4049B393E5858851825220B30C56FF16 /* URLRouteAnalysisResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DD54A139BAC06E2BB709EA141AA59811 /* URLRouteAnalysisResult.m */; };
-		42EA9C2AE333D493A300F743A0A07C92 /* URLRouterSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 764866C20CF315847E1B8D8C0E00C4EB /* URLRouterSettings.m */; };
-		4A8A9072037F4D445B4776CEFF12A5C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		55CCFFEA916963BBBD95B57D5E9BF1CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		56CB85D98B6CCE7E3C345FCEB2A25C4A /* Pods-RickURLRouter_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCF6097FEEFDDFD5C1E197C4F12FBB3 /* Pods-RickURLRouter_Example-dummy.m */; };
-		61AA9CA87FC354F1A9C2B9E5F4876795 /* URLRouteDefaultAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 065EAD337547EEBE1A4EED339A024BE7 /* URLRouteDefaultAnalyzer.m */; };
-		6483D3935528D7FEF907146A13003B57 /* URLRouteDefaultAnalyzer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEE9024BCBAC89BE661896FB04728A6 /* URLRouteDefaultAnalyzer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		69373D21FC10B59B40E661B50F3106E9 /* URLRouteAnalyzer.h in Headers */ = {isa = PBXBuildFile; fileRef = F89D242963B0BFCE81DBBA615660C613 /* URLRouteAnalyzer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6D162F25240C0BD88C824BF8898EAC65 /* URLRouteAnalysisResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EE72D64F063842DCAAECA8149ED4EA3 /* URLRouteAnalysisResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EA6624F85100099EBF76A27C5B7D89C /* URLRouterSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = D3F1C2CA43A97CF9EAA01B1D24BF66BD /* URLRouterSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		76F486F6D03268763FA70BBE2B37F2DF /* BaseRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB26BB6FE98D4FE1BF87AF48B7D610D /* BaseRouterViewController.m */; };
-		85548BD2F414CAE8BD24D02A77D4D446 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		8C82CD3E6C5E24C6CEA6F7DBDBEA5C17 /* URLRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A12E52E71ACBDB9605ED6C33070D3C /* URLRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		98F2FE2156F662CC7B065C2659A50FF1 /* RickURLRouter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73D9E84D8B6A0B2633916012EC7564AC /* RickURLRouter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9CCFCED838613D78FEB5DAEA20FE3E13 /* URLRouterUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DD2EBDD76B0B7097DDED2D0157E2C57 /* URLRouterUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0077E2C1E1042512F36A3204CFD42BEF /* NSObject+MJClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DBDD41C00E04DBB9C274BD293F14DA /* NSObject+MJClass.m */; };
+		00DBCAF6A4D9F13309F16E2D7875FA96 /* Pods-RickURLRouter_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCF6097FEEFDDFD5C1E197C4F12FBB3 /* Pods-RickURLRouter_Example-dummy.m */; };
+		01E3E1FB1F9A0FA56C79608F8139A32F /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0EC9D5133B0B0939C524CD463CB225 /* MJExtensionConst.m */; };
+		033484819373AB7E020C0026CAE0F7BF /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD8143D09D486240B9457CEDB2F4921 /* MJFoundation.m */; };
+		05452B06007B8F1969A23C3C9D494CBD /* MJExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE230A136C33D5DFC04E7CF843F6AA3 /* MJExtension-dummy.m */; };
+		07288680C9E7EDC1E240E0E3C50EE65C /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F2D4B6FA59D541EA2D7414CED63243 /* NSObject+MJProperty.m */; };
+		0DF56E57505F1B7D534C3E408E7DAC38 /* BaseRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB26BB6FE98D4FE1BF87AF48B7D610D /* BaseRouterViewController.m */; };
+		16F885C91917CBF020050BB92902E6CC /* URLRouterUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DD2EBDD76B0B7097DDED2D0157E2C57 /* URLRouterUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		171BFBA5E3C56D2F36A86F0D9ACFC41E /* URLRouteAnalysisResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DD54A139BAC06E2BB709EA141AA59811 /* URLRouteAnalysisResult.m */; };
+		25E03213AA01D83EB415A04635B34F1A /* NSObject+MJKeyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 722454F711E3EB3686DFDDA5905AD548 /* NSObject+MJKeyValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2AFE9E870D95F9D63171384809070C82 /* RickURLRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C0F71CF05596E3A7DF2A7B48C91BF /* RickURLRouter-dummy.m */; };
+		38B500242EDC126336E2A8433EE30FC9 /* URLRouteAnalysisResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EE72D64F063842DCAAECA8149ED4EA3 /* URLRouteAnalysisResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BAA6DDBE44238B40D6A72A16EF41814 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C748F53D69C9F41894F8E3EE99D4E6 /* MJProperty.m */; };
+		41BBD20F99D3D0EFD9D38337503D4C1F /* MJExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4AA39722992178C121890FF107BDFDB /* MJExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45B2694F9409E41E8C3C8B6726B112CD /* BaseRouterViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F455A190B8DD17DDAC6BFFB725EC31D /* BaseRouterViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48461A92FE716CAE21B8BF0F04E4881C /* URLRouterConst.h in Headers */ = {isa = PBXBuildFile; fileRef = FB2D4A991A7E3ED801FEE1813E9B8FE0 /* URLRouterConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C5165F66F7238A8230A577FF5F5182A /* URLRouterUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B23BDB0F4988E0B39FE6AAF83A6390 /* URLRouterUtil.m */; };
+		4EF3D9B8B9DCBCD8B3CBAB933E143AF7 /* RickURLRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 695D73D31AB47ED4B1EE79B80A57A10E /* RickURLRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51E7A17D617310CE81444F5D315EAEF0 /* NSString+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EAED9402B0A0ED183081BF7FABAA59F /* NSString+MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5ACA4993C5884C5AD06028AD846C6AAE /* RickURLRouter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73D9E84D8B6A0B2633916012EC7564AC /* RickURLRouter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EC015330CAC3D60745A20B01928B8DB /* NSObject+MJCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = B925662A8ED0D15431C1D807885D30C8 /* NSObject+MJCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70F4C1906806F2B44A57E1D2CF4EBBB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04AC621D1A86F2AC40200FFAD16DBAA /* Foundation.framework */; };
+		7155607EADA71F37CFE188D866B7E40A /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = F9888BA6FEC1DE1D26D45D995FBAE643 /* MJPropertyKey.m */; };
+		7273A5FCC56B9EACA7C902B7DFF16336 /* URLRouterConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E013588AA22F7B316696C34CEE960BF /* URLRouterConst.m */; };
+		7BE71B62F38458AC771581F60006F9CE /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FAF5EB1DD403C7CDB888674662D978 /* NSObject+MJCoding.m */; };
+		7E8510B44C4D181B1D15E877DA6526DE /* URLRouterSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 764866C20CF315847E1B8D8C0E00C4EB /* URLRouterSettings.m */; };
+		7EC480C51296319E033F29A345B43666 /* URLRouteResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 289DAA4C81DEB5C1FEEC719BB6B78C96 /* URLRouteResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85548BD2F414CAE8BD24D02A77D4D446 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04AC621D1A86F2AC40200FFAD16DBAA /* Foundation.framework */; };
+		8A2E1E487FBFC3DF55C12C056BFA36A1 /* MJPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = 9439ED235893B1765356769F00419D69 /* MJPropertyType.m */; };
+		8FC29E832DDAB80383225B6835060BA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04AC621D1A86F2AC40200FFAD16DBAA /* Foundation.framework */; };
+		912758556B9AB1DEEABE189955C5B8F2 /* MJExtensionConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AC2F4FEDA5480035CE1BAF83E25D914 /* MJExtensionConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94FECF34B193343D272C5BD6684C6FAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E04AC621D1A86F2AC40200FFAD16DBAA /* Foundation.framework */; };
+		9796F9FAC1941A992E8B17F31D62B2E4 /* MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0D1CDFA422DF34E039272161E024D3 /* MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99BF63084CB0EDEA0A9CBB77E8315E6E /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E382DC0FAFC66BEB5E97EC9FA55C4C /* NSObject+MJKeyValue.m */; };
 		9E7EE3B5AC515889A50F4661F823F185 /* Pods-RickURLRouter_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B76461F8F14FC22FCC489301B3F541 /* Pods-RickURLRouter_Tests-dummy.m */; };
+		A47472F50A3A7869A644789159571A5C /* MJPropertyKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 647DEB7154D476B029B4483DB8CE289E /* MJPropertyKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7518D622855FA845A7F84092CE577D0 /* Pods-RickURLRouter_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4617C24228B0070F0700160B2FEC169 /* Pods-RickURLRouter_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA716795BBD44200D1A852B87E33C994 /* Pods-RickURLRouter_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0098B4DE7B7CF58300940C7E09376E9 /* Pods-RickURLRouter_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B6382D740364064EC274C2F0441226D5 /* BaseRouterViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F455A190B8DD17DDAC6BFFB725EC31D /* BaseRouterViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1C879ED3CF42D6C7B32B4783AB94484 /* URLRouteResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 289DAA4C81DEB5C1FEEC719BB6B78C96 /* URLRouteResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E31F37FE3CAFAA18626C4ED9DFCC033B /* URLRouterConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E013588AA22F7B316696C34CEE960BF /* URLRouterConst.m */; };
-		E4C972261805AA90609187036235BE39 /* Pods-RickURLRouter_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4617C24228B0070F0700160B2FEC169 /* Pods-RickURLRouter_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F088AAC938A34F1A852705A62A8B0A0C /* URLRouteResult.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C95265946AD7279935902E5BDB5EB /* URLRouteResult.m */; };
+		AFC89F56FA6C887E6391EAA7E120C496 /* URLRouteDefaultAnalyzer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AEE9024BCBAC89BE661896FB04728A6 /* URLRouteDefaultAnalyzer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B94AD428EA4EFD7BA79BCF57680D390A /* MJPropertyType.h in Headers */ = {isa = PBXBuildFile; fileRef = F1677E44A587E61DCA0F931B2889708A /* MJPropertyType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0C8961B2EAF90DA7244B427C569FCFD /* NSObject+MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E1F10EA913620099996314C434C50D /* NSObject+MJProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAD2539BE3C4AB2F1FD1DF30D7629238 /* MJFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A92C2B40005CF9A440380490CC1C808 /* MJFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC5188470815B900B66E6073A497A910 /* URLRouterSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = D3F1C2CA43A97CF9EAA01B1D24BF66BD /* URLRouterSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D190B6150DDCBBFCD3F672BFD317DD1F /* MJExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABEF07C065DAA1093F386E0864101B0 /* MJExtension.framework */; };
+		DDD508ED1F620EF2737FE81F39184A20 /* URLRouteDefaultAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 065EAD337547EEBE1A4EED339A024BE7 /* URLRouteDefaultAnalyzer.m */; };
+		E6775033B3F0080B56E29AB395A08867 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD97592D9872742C8B28DA6FC033DB1 /* NSString+MJExtension.m */; };
+		E889B44E88F855E71457D97FE9D02F16 /* URLRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A12E52E71ACBDB9605ED6C33070D3C /* URLRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8B7A5280C87276554B50D3D734A78E8 /* URLRouteAnalyzer.h in Headers */ = {isa = PBXBuildFile; fileRef = F89D242963B0BFCE81DBBA615660C613 /* URLRouteAnalyzer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0EF96DAB145D1B2247C01B3517B54FE /* NSObject+MJClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A82A404B552FB57557D37DC51173CFF /* NSObject+MJClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F228D09B10A5E7C45AFDA991B56AE646 /* URLRouteResult.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C95265946AD7279935902E5BDB5EB /* URLRouteResult.m */; };
+		FAB7CF107E7E3EE6FA7949CF18B8BA12 /* MJProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2E660F26D90631109BC6C139DCBE03 /* MJProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5E01A90105F4DF4C02EE6CFABD3264A6 /* PBXContainerItemProxy */ = {
+		1EBC3B419A02A316A7874D34BE8E38CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FBE682ED5CF8FDB0C1F107856B55C393;
 			remoteInfo = RickURLRouter;
+		};
+		2D24462B4C3C200E1EE9B0C686D4BEFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D3BA58D0583DF37575CACAB3DDADC85;
+			remoteInfo = MJExtension;
 		};
 		BDE1943D2C1B7F288BA98FFFDA3FB170 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -49,6 +81,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = BF5227F5487324BE0F7FC444DDDE433B;
 			remoteInfo = "Pods-RickURLRouter_Example";
+		};
+		F1484FDCA95B63D02735E85E07C95115 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D3BA58D0583DF37575CACAB3DDADC85;
+			remoteInfo = MJExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -60,64 +99,103 @@
 		1179249BF849939E6E57F51F0A03597C /* Pods-RickURLRouter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RickURLRouter_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		11A27F607EEE34434EFAE951CD2A62F1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		140D6FBDB6F613D1E1459BF79A0580F5 /* Pods-RickURLRouter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RickURLRouter_Example.release.xcconfig"; sourceTree = "<group>"; };
+		15E382DC0FAFC66BEB5E97EC9FA55C4C /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJKeyValue.m"; path = "MJExtension/NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		1D2E660F26D90631109BC6C139DCBE03 /* MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJProperty.h; path = MJExtension/MJProperty.h; sourceTree = "<group>"; };
 		1DFB3EA4F3330B63E62BC5D169403074 /* RickURLRouter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RickURLRouter.debug.xcconfig; sourceTree = "<group>"; };
 		27A12E52E71ACBDB9605ED6C33070D3C /* URLRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = URLRouter.h; path = RickURLRouter/Classes/URLRouter.h; sourceTree = "<group>"; };
 		289DAA4C81DEB5C1FEEC719BB6B78C96 /* URLRouteResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = URLRouteResult.h; path = RickURLRouter/Classes/URLRouteResult.h; sourceTree = "<group>"; };
+		2A92C2B40005CF9A440380490CC1C808 /* MJFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJFoundation.h; path = MJExtension/MJFoundation.h; sourceTree = "<group>"; };
+		2B276B0A79173A1D6E83C9B4FB9A4A57 /* MJExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MJExtension.framework; path = MJExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E013588AA22F7B316696C34CEE960BF /* URLRouterConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = URLRouterConst.m; path = RickURLRouter/Classes/URLRouterConst.m; sourceTree = "<group>"; };
 		307973295CECD9A2794F4BA1CE3D0478 /* Pods_RickURLRouter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RickURLRouter_Tests.framework; path = "Pods-RickURLRouter_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		320DC427D8622D530A58750BF9F38D3A /* Pods_RickURLRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RickURLRouter_Example.framework; path = "Pods-RickURLRouter_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		38FAF5EB1DD403C7CDB888674662D978 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJCoding.m"; path = "MJExtension/NSObject+MJCoding.m"; sourceTree = "<group>"; };
 		42B23BDB0F4988E0B39FE6AAF83A6390 /* URLRouterUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = URLRouterUtil.m; path = RickURLRouter/Classes/URLRouterUtil.m; sourceTree = "<group>"; };
 		4C9C0F71CF05596E3A7DF2A7B48C91BF /* RickURLRouter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RickURLRouter-dummy.m"; sourceTree = "<group>"; };
 		4DD2EBDD76B0B7097DDED2D0157E2C57 /* URLRouterUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = URLRouterUtil.h; path = RickURLRouter/Classes/URLRouterUtil.h; sourceTree = "<group>"; };
+		4E0D1CDFA422DF34E039272161E024D3 /* MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtension.h; path = MJExtension/MJExtension.h; sourceTree = "<group>"; };
+		520A3A9FD574A96B394D81B865C1E6BB /* MJExtension-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJExtension-prefix.pch"; sourceTree = "<group>"; };
+		52E1F10EA913620099996314C434C50D /* NSObject+MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJProperty.h"; path = "MJExtension/NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		5AC2F4FEDA5480035CE1BAF83E25D914 /* MJExtensionConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtensionConst.h; path = MJExtension/MJExtensionConst.h; sourceTree = "<group>"; };
 		5FB26BB6FE98D4FE1BF87AF48B7D610D /* BaseRouterViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BaseRouterViewController.m; path = RickURLRouter/Classes/BaseRouterViewController.m; sourceTree = "<group>"; };
+		647DEB7154D476B029B4483DB8CE289E /* MJPropertyKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyKey.h; path = MJExtension/MJPropertyKey.h; sourceTree = "<group>"; };
 		695D73D31AB47ED4B1EE79B80A57A10E /* RickURLRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RickURLRouter.h; path = RickURLRouter/Classes/RickURLRouter.h; sourceTree = "<group>"; };
 		6E2B3BA133443C3FDCF99EA70EC09D60 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		6EE72D64F063842DCAAECA8149ED4EA3 /* URLRouteAnalysisResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = URLRouteAnalysisResult.h; path = RickURLRouter/Classes/URLRouteAnalysisResult.h; sourceTree = "<group>"; };
 		711B19B22E41E4E01FA04EF993220D62 /* RickURLRouter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RickURLRouter.modulemap; sourceTree = "<group>"; };
+		722454F711E3EB3686DFDDA5905AD548 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJKeyValue.h"; path = "MJExtension/NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
 		73D9E84D8B6A0B2633916012EC7564AC /* RickURLRouter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RickURLRouter-umbrella.h"; sourceTree = "<group>"; };
 		764866C20CF315847E1B8D8C0E00C4EB /* URLRouterSettings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = URLRouterSettings.m; path = RickURLRouter/Classes/URLRouterSettings.m; sourceTree = "<group>"; };
+		7A82A404B552FB57557D37DC51173CFF /* NSObject+MJClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJClass.h"; path = "MJExtension/NSObject+MJClass.h"; sourceTree = "<group>"; };
+		7ABEF07C065DAA1093F386E0864101B0 /* MJExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F455A190B8DD17DDAC6BFFB725EC31D /* BaseRouterViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BaseRouterViewController.h; path = RickURLRouter/Classes/BaseRouterViewController.h; sourceTree = "<group>"; };
 		82B0ADB9892749A8FB5A40A2E5962041 /* RickURLRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RickURLRouter.framework; path = RickURLRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87144F9769B7D6F5B9D6B19BBA7A5F69 /* Pods-RickURLRouter_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RickURLRouter_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8C0EC9D5133B0B0939C524CD463CB225 /* MJExtensionConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJExtensionConst.m; path = MJExtension/MJExtensionConst.m; sourceTree = "<group>"; };
 		8DEC61DF384E8EDE7DAD32D6F1DC80BA /* RickURLRouter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RickURLRouter-prefix.pch"; sourceTree = "<group>"; };
 		8DFBE7E132B152CE15323D6513AE79D2 /* Pods-RickURLRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RickURLRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		90DBB404E98713FED61E02527436CF10 /* Pods-RickURLRouter_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RickURLRouter_Example-Info.plist"; sourceTree = "<group>"; };
+		9439ED235893B1765356769F00419D69 /* MJPropertyType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyType.m; path = MJExtension/MJPropertyType.m; sourceTree = "<group>"; };
 		963914DB726AAB01BEAACB81DAAF845C /* Pods-RickURLRouter_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RickURLRouter_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		99ED713C436B2CA54D7AFDC647520DB9 /* RickURLRouter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = RickURLRouter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EAED9402B0A0ED183081BF7FABAA59F /* NSString+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MJExtension.h"; path = "MJExtension/NSString+MJExtension.h"; sourceTree = "<group>"; };
 		A1B76461F8F14FC22FCC489301B3F541 /* Pods-RickURLRouter_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RickURLRouter_Tests-dummy.m"; sourceTree = "<group>"; };
 		A6FC85A7EF55C976D7F4BB49E356D3A7 /* Pods-RickURLRouter_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RickURLRouter_Tests-Info.plist"; sourceTree = "<group>"; };
+		A9DBDD41C00E04DBB9C274BD293F14DA /* NSObject+MJClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJClass.m"; path = "MJExtension/NSObject+MJClass.m"; sourceTree = "<group>"; };
 		ABCF6097FEEFDDFD5C1E197C4F12FBB3 /* Pods-RickURLRouter_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RickURLRouter_Example-dummy.m"; sourceTree = "<group>"; };
+		B3E2896E58D70126F579F90790BB4670 /* MJExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MJExtension-Info.plist"; sourceTree = "<group>"; };
 		B4617C24228B0070F0700160B2FEC169 /* Pods-RickURLRouter_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RickURLRouter_Example-umbrella.h"; sourceTree = "<group>"; };
+		B7C748F53D69C9F41894F8E3EE99D4E6 /* MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJProperty.m; path = MJExtension/MJProperty.m; sourceTree = "<group>"; };
+		B925662A8ED0D15431C1D807885D30C8 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJCoding.h"; path = "MJExtension/NSObject+MJCoding.h"; sourceTree = "<group>"; };
 		C0098B4DE7B7CF58300940C7E09376E9 /* Pods-RickURLRouter_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RickURLRouter_Tests-umbrella.h"; sourceTree = "<group>"; };
 		C549D6E22F4BB358C1B00230DA25FFDB /* Pods-RickURLRouter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RickURLRouter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CCCC6813874BA7D17D710AABC2BF85E0 /* Pods-RickURLRouter_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RickURLRouter_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		CCD8143D09D486240B9457CEDB2F4921 /* MJFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJFoundation.m; path = MJExtension/MJFoundation.m; sourceTree = "<group>"; };
+		CDD97592D9872742C8B28DA6FC033DB1 /* NSString+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MJExtension.m"; path = "MJExtension/NSString+MJExtension.m"; sourceTree = "<group>"; };
+		CE4AE92E87BA615AC8C329B245AB7B44 /* MJExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJExtension.debug.xcconfig; sourceTree = "<group>"; };
 		D3F1C2CA43A97CF9EAA01B1D24BF66BD /* URLRouterSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = URLRouterSettings.h; path = RickURLRouter/Classes/URLRouterSettings.h; sourceTree = "<group>"; };
+		D4AA39722992178C121890FF107BDFDB /* MJExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJExtension-umbrella.h"; sourceTree = "<group>"; };
 		DBD0F7494C6A9B85132B3AFF85969A89 /* Pods-RickURLRouter_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RickURLRouter_Example-frameworks.sh"; sourceTree = "<group>"; };
 		DD54A139BAC06E2BB709EA141AA59811 /* URLRouteAnalysisResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = URLRouteAnalysisResult.m; path = RickURLRouter/Classes/URLRouteAnalysisResult.m; sourceTree = "<group>"; };
+		E04AC621D1A86F2AC40200FFAD16DBAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E1CDEC88926F3ECF5A354C7F200A0A91 /* MJExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MJExtension.modulemap; sourceTree = "<group>"; };
+		E1F2D4B6FA59D541EA2D7414CED63243 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJProperty.m"; path = "MJExtension/NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		E34637D5728883AC53DC8D59D9F1F60A /* RickURLRouter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RickURLRouter-Info.plist"; sourceTree = "<group>"; };
 		E563219EBEE784F0641B9E698FE931FA /* RickURLRouter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RickURLRouter.release.xcconfig; sourceTree = "<group>"; };
+		EAE230A136C33D5DFC04E7CF843F6AA3 /* MJExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJExtension-dummy.m"; sourceTree = "<group>"; };
+		F1677E44A587E61DCA0F931B2889708A /* MJPropertyType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJPropertyType.h; path = MJExtension/MJPropertyType.h; sourceTree = "<group>"; };
 		F63C95265946AD7279935902E5BDB5EB /* URLRouteResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = URLRouteResult.m; path = RickURLRouter/Classes/URLRouteResult.m; sourceTree = "<group>"; };
 		F89D242963B0BFCE81DBBA615660C613 /* URLRouteAnalyzer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = URLRouteAnalyzer.h; path = RickURLRouter/Classes/URLRouteAnalyzer.h; sourceTree = "<group>"; };
+		F91CF9BB22485DC3F39D5C2F60905F49 /* MJExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJExtension.release.xcconfig; sourceTree = "<group>"; };
+		F9888BA6FEC1DE1D26D45D995FBAE643 /* MJPropertyKey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJPropertyKey.m; path = MJExtension/MJPropertyKey.m; sourceTree = "<group>"; };
 		FB2D4A991A7E3ED801FEE1813E9B8FE0 /* URLRouterConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = URLRouterConst.h; path = RickURLRouter/Classes/URLRouterConst.h; sourceTree = "<group>"; };
 		FCAAB985E6F49BA6490B1F7CDFE89532 /* Pods-RickURLRouter_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RickURLRouter_Tests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0098A07D2DC4403C5059383647FF1C74 /* Frameworks */ = {
+		89A8F1F6F039B60DCF370A3157D032D2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A8A9072037F4D445B4776CEFF12A5C6 /* Foundation.framework in Frameworks */,
+				94FECF34B193343D272C5BD6684C6FAB /* Foundation.framework in Frameworks */,
+				D190B6150DDCBBFCD3F672BFD317DD1F /* MJExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0D516C1D385F1FC3B1570A565AF8CB7C /* Frameworks */ = {
+		C7FF566EFA0DA30B0483DA1FF79D8B40 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55CCFFEA916963BBBD95B57D5E9BF1CD /* Foundation.framework in Frameworks */,
+				70F4C1906806F2B44A57E1D2CF4EBBB5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3DFB7F06EC80553131DB5B0993D681C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FC29E832DDAB80383225B6835060BA1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +210,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0547791AF21ED42E03DB5C3D53C0C668 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B276B0A79173A1D6E83C9B4FB9A4A57 /* MJExtension.framework */,
+				320DC427D8622D530A58750BF9F38D3A /* Pods_RickURLRouter_Example.framework */,
+				307973295CECD9A2794F4BA1CE3D0478 /* Pods_RickURLRouter_Tests.framework */,
+				82B0ADB9892749A8FB5A40A2E5962041 /* RickURLRouter.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09CFB7B0128F70A029CD34F214B5EEA3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1CDEC88926F3ECF5A354C7F200A0A91 /* MJExtension.modulemap */,
+				EAE230A136C33D5DFC04E7CF843F6AA3 /* MJExtension-dummy.m */,
+				B3E2896E58D70126F579F90790BB4670 /* MJExtension-Info.plist */,
+				520A3A9FD574A96B394D81B865C1E6BB /* MJExtension-prefix.pch */,
+				D4AA39722992178C121890FF107BDFDB /* MJExtension-umbrella.h */,
+				CE4AE92E87BA615AC8C329B245AB7B44 /* MJExtension.debug.xcconfig */,
+				F91CF9BB22485DC3F39D5C2F60905F49 /* MJExtension.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MJExtension";
+			sourceTree = "<group>";
+		};
 		10B1897B0D589CC2C11112845A2E6493 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,16 +262,6 @@
 			path = "Target Support Files/Pods-RickURLRouter_Example";
 			sourceTree = "<group>";
 		};
-		5CE2713CCA0CEA473ABBC4E74EDA09DC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				320DC427D8622D530A58750BF9F38D3A /* Pods_RickURLRouter_Example.framework */,
-				307973295CECD9A2794F4BA1CE3D0478 /* Pods_RickURLRouter_Tests.framework */,
-				82B0ADB9892749A8FB5A40A2E5962041 /* RickURLRouter.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		745EDACEC0EB31979C8A03ADC9650D3C /* Pods-RickURLRouter_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +276,36 @@
 			);
 			name = "Pods-RickURLRouter_Tests";
 			path = "Target Support Files/Pods-RickURLRouter_Tests";
+			sourceTree = "<group>";
+		};
+		808A5CABAA06C682B29EC43B40BF875E /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				4E0D1CDFA422DF34E039272161E024D3 /* MJExtension.h */,
+				5AC2F4FEDA5480035CE1BAF83E25D914 /* MJExtensionConst.h */,
+				8C0EC9D5133B0B0939C524CD463CB225 /* MJExtensionConst.m */,
+				2A92C2B40005CF9A440380490CC1C808 /* MJFoundation.h */,
+				CCD8143D09D486240B9457CEDB2F4921 /* MJFoundation.m */,
+				1D2E660F26D90631109BC6C139DCBE03 /* MJProperty.h */,
+				B7C748F53D69C9F41894F8E3EE99D4E6 /* MJProperty.m */,
+				647DEB7154D476B029B4483DB8CE289E /* MJPropertyKey.h */,
+				F9888BA6FEC1DE1D26D45D995FBAE643 /* MJPropertyKey.m */,
+				F1677E44A587E61DCA0F931B2889708A /* MJPropertyType.h */,
+				9439ED235893B1765356769F00419D69 /* MJPropertyType.m */,
+				7A82A404B552FB57557D37DC51173CFF /* NSObject+MJClass.h */,
+				A9DBDD41C00E04DBB9C274BD293F14DA /* NSObject+MJClass.m */,
+				B925662A8ED0D15431C1D807885D30C8 /* NSObject+MJCoding.h */,
+				38FAF5EB1DD403C7CDB888674662D978 /* NSObject+MJCoding.m */,
+				722454F711E3EB3686DFDDA5905AD548 /* NSObject+MJKeyValue.h */,
+				15E382DC0FAFC66BEB5E97EC9FA55C4C /* NSObject+MJKeyValue.m */,
+				52E1F10EA913620099996314C434C50D /* NSObject+MJProperty.h */,
+				E1F2D4B6FA59D541EA2D7414CED63243 /* NSObject+MJProperty.m */,
+				9EAED9402B0A0ED183081BF7FABAA59F /* NSString+MJExtension.h */,
+				CDD97592D9872742C8B28DA6FC033DB1 /* NSString+MJExtension.m */,
+				09CFB7B0128F70A029CD34F214B5EEA3 /* Support Files */,
+			);
+			name = MJExtension;
+			path = MJExtension;
 			sourceTree = "<group>";
 		};
 		8D5BBF689A329EE60B89B370DEE3D54A /* Support Files */ = {
@@ -236,6 +360,15 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
+		98254C63E096C42740938CF63ED1D89D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7ABEF07C065DAA1093F386E0864101B0 /* MJExtension.framework */,
+				D72DBDC52C068CF1A6EDD7F19C21FC94 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		995870DE64EFF2A4E5A9611ABBC1BF86 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,12 +377,12 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+		BBE7F25BDF6E2ECE64867498D8902AF4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+				808A5CABAA06C682B29EC43B40BF875E /* MJExtension */,
 			);
-			name = iOS;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -257,46 +390,66 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				995870DE64EFF2A4E5A9611ABBC1BF86 /* Development Pods */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				5CE2713CCA0CEA473ABBC4E74EDA09DC /* Products */,
+				98254C63E096C42740938CF63ED1D89D /* Frameworks */,
+				BBE7F25BDF6E2ECE64867498D8902AF4 /* Pods */,
+				0547791AF21ED42E03DB5C3D53C0C668 /* Products */,
 				10B1897B0D589CC2C11112845A2E6493 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		D72DBDC52C068CF1A6EDD7F19C21FC94 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+				E04AC621D1A86F2AC40200FFAD16DBAA /* Foundation.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		89A6A794CBFA84B57BAB03C8BFB7C6F6 /* Headers */ = {
+		733914F2F06FA9653A8B1D2D689C6EC5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4C972261805AA90609187036235BE39 /* Pods-RickURLRouter_Example-umbrella.h in Headers */,
+				45B2694F9409E41E8C3C8B6726B112CD /* BaseRouterViewController.h in Headers */,
+				5ACA4993C5884C5AD06028AD846C6AAE /* RickURLRouter-umbrella.h in Headers */,
+				4EF3D9B8B9DCBCD8B3CBAB933E143AF7 /* RickURLRouter.h in Headers */,
+				38B500242EDC126336E2A8433EE30FC9 /* URLRouteAnalysisResult.h in Headers */,
+				E8B7A5280C87276554B50D3D734A78E8 /* URLRouteAnalyzer.h in Headers */,
+				AFC89F56FA6C887E6391EAA7E120C496 /* URLRouteDefaultAnalyzer.h in Headers */,
+				E889B44E88F855E71457D97FE9D02F16 /* URLRouter.h in Headers */,
+				48461A92FE716CAE21B8BF0F04E4881C /* URLRouterConst.h in Headers */,
+				7EC480C51296319E033F29A345B43666 /* URLRouteResult.h in Headers */,
+				CC5188470815B900B66E6073A497A910 /* URLRouterSettings.h in Headers */,
+				16F885C91917CBF020050BB92902E6CC /* URLRouterUtil.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0F55D1E2FB7AB3BE5AD445930094585 /* Headers */ = {
+		8E252638041EF415C4C0D626DC98C3B6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6382D740364064EC274C2F0441226D5 /* BaseRouterViewController.h in Headers */,
-				98F2FE2156F662CC7B065C2659A50FF1 /* RickURLRouter-umbrella.h in Headers */,
-				33CAE348A4C414841733A6342A19F2C1 /* RickURLRouter.h in Headers */,
-				6D162F25240C0BD88C824BF8898EAC65 /* URLRouteAnalysisResult.h in Headers */,
-				69373D21FC10B59B40E661B50F3106E9 /* URLRouteAnalyzer.h in Headers */,
-				6483D3935528D7FEF907146A13003B57 /* URLRouteDefaultAnalyzer.h in Headers */,
-				8C82CD3E6C5E24C6CEA6F7DBDBEA5C17 /* URLRouter.h in Headers */,
-				07477D97209F96BF8F3D18612CAAAE96 /* URLRouterConst.h in Headers */,
-				E1C879ED3CF42D6C7B32B4783AB94484 /* URLRouteResult.h in Headers */,
-				6EA6624F85100099EBF76A27C5B7D89C /* URLRouterSettings.h in Headers */,
-				9CCFCED838613D78FEB5DAEA20FE3E13 /* URLRouterUtil.h in Headers */,
+				A7518D622855FA845A7F84092CE577D0 /* Pods-RickURLRouter_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB1DE317F3D4815D87890DEB09B99C2E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41BBD20F99D3D0EFD9D38337503D4C1F /* MJExtension-umbrella.h in Headers */,
+				9796F9FAC1941A992E8B17F31D62B2E4 /* MJExtension.h in Headers */,
+				912758556B9AB1DEEABE189955C5B8F2 /* MJExtensionConst.h in Headers */,
+				CAD2539BE3C4AB2F1FD1DF30D7629238 /* MJFoundation.h in Headers */,
+				FAB7CF107E7E3EE6FA7949CF18B8BA12 /* MJProperty.h in Headers */,
+				A47472F50A3A7869A644789159571A5C /* MJPropertyKey.h in Headers */,
+				B94AD428EA4EFD7BA79BCF57680D390A /* MJPropertyType.h in Headers */,
+				F0EF96DAB145D1B2247C01B3517B54FE /* NSObject+MJClass.h in Headers */,
+				6EC015330CAC3D60745A20B01928B8DB /* NSObject+MJCoding.h in Headers */,
+				25E03213AA01D83EB415A04635B34F1A /* NSObject+MJKeyValue.h in Headers */,
+				C0C8961B2EAF90DA7244B427C569FCFD /* NSObject+MJProperty.h in Headers */,
+				51E7A17D617310CE81444F5D315EAEF0 /* NSString+MJExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +464,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4D3BA58D0583DF37575CACAB3DDADC85 /* MJExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B8E68449A18121BC5A5B5C491F1283E /* Build configuration list for PBXNativeTarget "MJExtension" */;
+			buildPhases = (
+				DB1DE317F3D4815D87890DEB09B99C2E /* Headers */,
+				7062CDA8FD11E2E9D19A9A40021C44AD /* Sources */,
+				E3DFB7F06EC80553131DB5B0993D681C /* Frameworks */,
+				5526C4C8822D8F13C2C736A5F9677481 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MJExtension;
+			productName = MJExtension;
+			productReference = 2B276B0A79173A1D6E83C9B4FB9A4A57 /* MJExtension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		6C0B2CDCDC8738D1BD96304406FA37E4 /* Pods-RickURLRouter_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD70F0BEDA18448A7E83D9F77E585A55 /* Build configuration list for PBXNativeTarget "Pods-RickURLRouter_Tests" */;
@@ -332,17 +503,18 @@
 		};
 		BF5227F5487324BE0F7FC444DDDE433B /* Pods-RickURLRouter_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 911261BA380721FB76BF37EB4732D230 /* Build configuration list for PBXNativeTarget "Pods-RickURLRouter_Example" */;
+			buildConfigurationList = C942538907A0596847C4F1E8BF303F78 /* Build configuration list for PBXNativeTarget "Pods-RickURLRouter_Example" */;
 			buildPhases = (
-				89A6A794CBFA84B57BAB03C8BFB7C6F6 /* Headers */,
-				38CF7BAACE21ACC6541723B31444957C /* Sources */,
-				0098A07D2DC4403C5059383647FF1C74 /* Frameworks */,
-				FEC303BE88376F3537007B70CF4F13FB /* Resources */,
+				8E252638041EF415C4C0D626DC98C3B6 /* Headers */,
+				F900D9CEA3C3359A4C29AD32FED6E766 /* Sources */,
+				C7FF566EFA0DA30B0483DA1FF79D8B40 /* Frameworks */,
+				B8D477FE19535CAB915B69CCCF1195EB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				628E9E858E8CD670A36D62A2A79E3185 /* PBXTargetDependency */,
+				BB9DA95789D5F53C559E5521B30FEBE8 /* PBXTargetDependency */,
+				ED7F434EADE7D76878225B359979B27C /* PBXTargetDependency */,
 			);
 			name = "Pods-RickURLRouter_Example";
 			productName = "Pods-RickURLRouter_Example";
@@ -351,16 +523,17 @@
 		};
 		FBE682ED5CF8FDB0C1F107856B55C393 /* RickURLRouter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3010B6EA4A0C5523D4CCD7D3F48FE3A4 /* Build configuration list for PBXNativeTarget "RickURLRouter" */;
+			buildConfigurationList = 4F527DB094AA54CEA7BF67B36E07D9A3 /* Build configuration list for PBXNativeTarget "RickURLRouter" */;
 			buildPhases = (
-				D0F55D1E2FB7AB3BE5AD445930094585 /* Headers */,
-				CD2B4D9E315FF90587C69477680EA8C0 /* Sources */,
-				0D516C1D385F1FC3B1570A565AF8CB7C /* Frameworks */,
-				8A75437CC61543A7BE8A351B7EB0187D /* Resources */,
+				733914F2F06FA9653A8B1D2D689C6EC5 /* Headers */,
+				BE1ABE5D08967E7541838A5A268CD016 /* Sources */,
+				89A8F1F6F039B60DCF370A3157D032D2 /* Frameworks */,
+				47F7CA12C236EBDBF4E57AC6D1879333 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CBE20128AA20F130B3BBF5DC0AA46B26 /* PBXTargetDependency */,
 			);
 			name = RickURLRouter;
 			productName = RickURLRouter;
@@ -385,10 +558,11 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 5CE2713CCA0CEA473ABBC4E74EDA09DC /* Products */;
+			productRefGroup = 0547791AF21ED42E03DB5C3D53C0C668 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				4D3BA58D0583DF37575CACAB3DDADC85 /* MJExtension */,
 				BF5227F5487324BE0F7FC444DDDE433B /* Pods-RickURLRouter_Example */,
 				6C0B2CDCDC8738D1BD96304406FA37E4 /* Pods-RickURLRouter_Tests */,
 				FBE682ED5CF8FDB0C1F107856B55C393 /* RickURLRouter */,
@@ -397,7 +571,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8A75437CC61543A7BE8A351B7EB0187D /* Resources */ = {
+		47F7CA12C236EBDBF4E57AC6D1879333 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5526C4C8822D8F13C2C736A5F9677481 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8D477FE19535CAB915B69CCCF1195EB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -411,21 +599,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FEC303BE88376F3537007B70CF4F13FB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		38CF7BAACE21ACC6541723B31444957C /* Sources */ = {
+		7062CDA8FD11E2E9D19A9A40021C44AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56CB85D98B6CCE7E3C345FCEB2A25C4A /* Pods-RickURLRouter_Example-dummy.m in Sources */,
+				05452B06007B8F1969A23C3C9D494CBD /* MJExtension-dummy.m in Sources */,
+				01E3E1FB1F9A0FA56C79608F8139A32F /* MJExtensionConst.m in Sources */,
+				033484819373AB7E020C0026CAE0F7BF /* MJFoundation.m in Sources */,
+				3BAA6DDBE44238B40D6A72A16EF41814 /* MJProperty.m in Sources */,
+				7155607EADA71F37CFE188D866B7E40A /* MJPropertyKey.m in Sources */,
+				8A2E1E487FBFC3DF55C12C056BFA36A1 /* MJPropertyType.m in Sources */,
+				0077E2C1E1042512F36A3204CFD42BEF /* NSObject+MJClass.m in Sources */,
+				7BE71B62F38458AC771581F60006F9CE /* NSObject+MJCoding.m in Sources */,
+				99BF63084CB0EDEA0A9CBB77E8315E6E /* NSObject+MJKeyValue.m in Sources */,
+				07288680C9E7EDC1E240E0E3C50EE65C /* NSObject+MJProperty.m in Sources */,
+				E6775033B3F0080B56E29AB395A08867 /* NSString+MJExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,18 +628,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD2B4D9E315FF90587C69477680EA8C0 /* Sources */ = {
+		BE1ABE5D08967E7541838A5A268CD016 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76F486F6D03268763FA70BBE2B37F2DF /* BaseRouterViewController.m in Sources */,
-				1DB2926E0C1DB087782AA5A7E59DB65C /* RickURLRouter-dummy.m in Sources */,
-				4049B393E5858851825220B30C56FF16 /* URLRouteAnalysisResult.m in Sources */,
-				61AA9CA87FC354F1A9C2B9E5F4876795 /* URLRouteDefaultAnalyzer.m in Sources */,
-				E31F37FE3CAFAA18626C4ED9DFCC033B /* URLRouterConst.m in Sources */,
-				F088AAC938A34F1A852705A62A8B0A0C /* URLRouteResult.m in Sources */,
-				42EA9C2AE333D493A300F743A0A07C92 /* URLRouterSettings.m in Sources */,
-				25CD9ACE941288F6EAB0D63E03E4E27F /* URLRouterUtil.m in Sources */,
+				0DF56E57505F1B7D534C3E408E7DAC38 /* BaseRouterViewController.m in Sources */,
+				2AFE9E870D95F9D63171384809070C82 /* RickURLRouter-dummy.m in Sources */,
+				171BFBA5E3C56D2F36A86F0D9ACFC41E /* URLRouteAnalysisResult.m in Sources */,
+				DDD508ED1F620EF2737FE81F39184A20 /* URLRouteDefaultAnalyzer.m in Sources */,
+				7273A5FCC56B9EACA7C902B7DFF16336 /* URLRouterConst.m in Sources */,
+				F228D09B10A5E7C45AFDA991B56AE646 /* URLRouteResult.m in Sources */,
+				7E8510B44C4D181B1D15E877DA6526DE /* URLRouterSettings.m in Sources */,
+				4C5165F66F7238A8230A577FF5F5182A /* URLRouterUtil.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F900D9CEA3C3359A4C29AD32FED6E766 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00DBCAF6A4D9F13309F16E2D7875FA96 /* Pods-RickURLRouter_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,15 +660,92 @@
 			target = BF5227F5487324BE0F7FC444DDDE433B /* Pods-RickURLRouter_Example */;
 			targetProxy = BDE1943D2C1B7F288BA98FFFDA3FB170 /* PBXContainerItemProxy */;
 		};
-		628E9E858E8CD670A36D62A2A79E3185 /* PBXTargetDependency */ = {
+		BB9DA95789D5F53C559E5521B30FEBE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MJExtension;
+			target = 4D3BA58D0583DF37575CACAB3DDADC85 /* MJExtension */;
+			targetProxy = 2D24462B4C3C200E1EE9B0C686D4BEFD /* PBXContainerItemProxy */;
+		};
+		CBE20128AA20F130B3BBF5DC0AA46B26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MJExtension;
+			target = 4D3BA58D0583DF37575CACAB3DDADC85 /* MJExtension */;
+			targetProxy = F1484FDCA95B63D02735E85E07C95115 /* PBXContainerItemProxy */;
+		};
+		ED7F434EADE7D76878225B359979B27C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RickURLRouter;
 			target = FBE682ED5CF8FDB0C1F107856B55C393 /* RickURLRouter */;
-			targetProxy = 5E01A90105F4DF4C02EE6CFABD3264A6 /* PBXContainerItemProxy */;
+			targetProxy = 1EBC3B419A02A316A7874D34BE8E38CC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0C6BB6DD4DAA5693072A5229AD827A62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DFBE7E132B152CE15323D6513AE79D2 /* Pods-RickURLRouter_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RickURLRouter_Example/Pods-RickURLRouter_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RickURLRouter_Example/Pods-RickURLRouter_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0F56A6CAE313961418575B5ED4589A24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E563219EBEE784F0641B9E698FE931FA /* RickURLRouter.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RickURLRouter/RickURLRouter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RickURLRouter/RickURLRouter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RickURLRouter/RickURLRouter.modulemap";
+				PRODUCT_MODULE_NAME = RickURLRouter;
+				PRODUCT_NAME = RickURLRouter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		17ED02B5C256C74FEECA4854604865C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1179249BF849939E6E57F51F0A03597C /* Pods-RickURLRouter_Tests.release.xcconfig */;
@@ -497,38 +773,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		1A89D0C409B5FC90CF2CEDED765C7E02 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E563219EBEE784F0641B9E698FE931FA /* RickURLRouter.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RickURLRouter/RickURLRouter-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RickURLRouter/RickURLRouter-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RickURLRouter/RickURLRouter.modulemap";
-				PRODUCT_MODULE_NAME = RickURLRouter;
-				PRODUCT_NAME = RickURLRouter;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -629,6 +873,37 @@
 			};
 			name = Debug;
 		};
+		64E4AD83EBF529047805DEBA2E604CA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE4AE92E87BA615AC8C329B245AB7B44 /* MJExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MJExtension/MJExtension-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MJExtension/MJExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MJExtension/MJExtension.modulemap";
+				PRODUCT_MODULE_NAME = MJExtension;
+				PRODUCT_NAME = MJExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -693,38 +968,7 @@
 			};
 			name = Debug;
 		};
-		A81BA66318B545FAA92F23CA06C95EE9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DFB3EA4F3330B63E62BC5D169403074 /* RickURLRouter.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RickURLRouter/RickURLRouter-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RickURLRouter/RickURLRouter-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RickURLRouter/RickURLRouter.modulemap";
-				PRODUCT_MODULE_NAME = RickURLRouter;
-				PRODUCT_NAME = RickURLRouter;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BC139A42811D841D894B12E3CCDB37D6 /* Release */ = {
+		8D7D02D3B3EA7F816E1EA786F711F215 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 140D6FBDB6F613D1E1459BF79A0580F5 /* Pods-RickURLRouter_Example.release.xcconfig */;
 			buildSettings = {
@@ -758,11 +1002,10 @@
 			};
 			name = Release;
 		};
-		D4B2400AAAC7FC75D96A03C1204C3104 /* Debug */ = {
+		B81FF577DB510F7A872610226E7396C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DFBE7E132B152CE15323D6513AE79D2 /* Pods-RickURLRouter_Example.debug.xcconfig */;
+			baseConfigurationReference = 1DFB3EA4F3330B63E62BC5D169403074 /* RickURLRouter.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -772,37 +1015,59 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-RickURLRouter_Example/Pods-RickURLRouter_Example-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/RickURLRouter/RickURLRouter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RickURLRouter/RickURLRouter-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-RickURLRouter_Example/Pods-RickURLRouter_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/RickURLRouter/RickURLRouter.modulemap";
+				PRODUCT_MODULE_NAME = RickURLRouter;
+				PRODUCT_NAME = RickURLRouter;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
+		FC694171C79213A671A5E3632E3B829F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F91CF9BB22485DC3F39D5C2F60905F49 /* MJExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MJExtension/MJExtension-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MJExtension/MJExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MJExtension/MJExtension.modulemap";
+				PRODUCT_MODULE_NAME = MJExtension;
+				PRODUCT_NAME = MJExtension;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3010B6EA4A0C5523D4CCD7D3F48FE3A4 /* Build configuration list for PBXNativeTarget "RickURLRouter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A81BA66318B545FAA92F23CA06C95EE9 /* Debug */,
-				1A89D0C409B5FC90CF2CEDED765C7E02 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -812,11 +1077,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		911261BA380721FB76BF37EB4732D230 /* Build configuration list for PBXNativeTarget "Pods-RickURLRouter_Example" */ = {
+		4F527DB094AA54CEA7BF67B36E07D9A3 /* Build configuration list for PBXNativeTarget "RickURLRouter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D4B2400AAAC7FC75D96A03C1204C3104 /* Debug */,
-				BC139A42811D841D894B12E3CCDB37D6 /* Release */,
+				B81FF577DB510F7A872610226E7396C9 /* Debug */,
+				0F56A6CAE313961418575B5ED4589A24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B8E68449A18121BC5A5B5C491F1283E /* Build configuration list for PBXNativeTarget "MJExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64E4AD83EBF529047805DEBA2E604CA2 /* Debug */,
+				FC694171C79213A671A5E3632E3B829F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -826,6 +1100,15 @@
 			buildConfigurations = (
 				58CDEB768FB0DE4AEF06E4D6383E60C0 /* Debug */,
 				17ED02B5C256C74FEECA4854604865C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C942538907A0596847C4F1E8BF303F78 /* Build configuration list for PBXNativeTarget "Pods-RickURLRouter_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C6BB6DD4DAA5693072A5229AD827A62 /* Debug */,
+				8D7D02D3B3EA7F816E1EA786F711F215 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

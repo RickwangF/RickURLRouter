@@ -65,7 +65,7 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C275A3B39E6E70F1190ED76 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		B0B136CDF474C82A910CB8C0 /* Pods_RickURLRouter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickURLRouter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB0067C5EEDF3AC3EBC5F0D9 /* RickURLRouter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RickURLRouter.podspec; path = ../RickURLRouter.podspec; sourceTree = "<group>"; };
+		CB0067C5EEDF3AC3EBC5F0D9 /* RickURLRouter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RickURLRouter.podspec; path = ../RickURLRouter.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F25B271E5F7A5AA73620F211 /* Pods-RickURLRouter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickURLRouter_Example.release.xcconfig"; path = "Target Support Files/Pods-RickURLRouter_Example/Pods-RickURLRouter_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -349,10 +349,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RickURLRouter_Example/Pods-RickURLRouter_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/RickURLRouter/RickURLRouter.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RickURLRouter.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, class) id<URLRouteAnalyzer> analyzer;
 
++ (NSString *)encodeURLString:(NSString*)originString;
+
++ (NSString *)decodeURLString:(NSString*)encodedString;
+
 + (URLRouteResult*)routeTo:(NSString*)module Target:(NSString*)target;
 
 + (URLRouteResult*)routeWithURL:(NSURL*)url;

@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "RickURLRouter/Classes/**/*"
+  "source_files": "RickURLRouter/Classes/**/*",
+  "dependencies": {
+    "MJExtension": [
+
+    ]
+  }
 }

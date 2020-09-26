@@ -31,6 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'RickURLRouter/Classes/**/*'
+  s.dependency 'MJExtension'
   
   # s.resource_bundles = {
   #   'RickURLRouter' => ['RickURLRouter/Assets/*.png']

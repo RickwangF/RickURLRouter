@@ -17,6 +17,7 @@ typedef NS_ENUM(NSInteger, URLRouteErrorCode) {
     URLRouteErrorCodeEmptyModule,
     URLRouteErrorCodeEmptyTarget,
     URLRouteErrorCodeInvalidParams,
+    URLRouteErrorCodeInvalidRouteModule,
     URLRouteErrorCodeInvalidRouteTarget
 };
 

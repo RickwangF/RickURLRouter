@@ -24,17 +24,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)decodeURLString:(NSString*)encodedString;
 
-+ (URLRouteResult*)routeTo:(NSString*)module Target:(NSString*)target Params:(NSDictionary*)params;
++ (URLRouteResult*)routeToURL:(NSURL*)url;
 
-+ (URLRouteResult*)routeWithURL:(NSURL*)url;
++ (URLRouteResult*)routeToURL:(NSURL*)url Style:(URLRouteStyle)style;
 
 + (URLRouteResult*)routeWithURLString:(NSString*)urlString;
 
-+ (URLRouteResult*)routeTo:(NSString*)module Target:(NSString*)target Params:(NSDictionary*)params Style:(URLRouteStyle)style;
-
-+ (URLRouteResult*)routeWithURL:(NSURL*)url Style:(URLRouteStyle)style;
-
 + (URLRouteResult*)routeWithURLString:(NSString*)urlString Style:(URLRouteStyle)style;
+
++ (URLRouteResult*)routeToModule:(NSString*)module Target:(NSString*)target Params:(NSDictionary*)params;
+
++ (URLRouteResult*)routeToModule:(NSString*)module Target:(NSString*)target Params:(NSDictionary*)params Style:(URLRouteStyle)style;
 
 @end
 

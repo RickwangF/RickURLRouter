@@ -17,7 +17,7 @@ static CreateNativeTargetBlock _nativeTargetBlock;
 
 @implementation URLRouterSettings
 
-@dynamic scheme, prefix, moduleEntrance, moduleTargets, fillParams, webTargetBlock, nativeTargetBlock;
+@dynamic scheme, prefix, moduleEntrance, moduleTargets, commonParams, webTargetBlock, nativeTargetBlock;
 
 #pragma mar - Getter && Setter
 
@@ -65,14 +65,14 @@ static CreateNativeTargetBlock _nativeTargetBlock;
     _moduleTargets = [moduleTargets mutableCopy];
 }
 
-+ (NSMutableDictionary *)fillParams{
++ (NSMutableDictionary *)commonParams{
     if (!_fillParams) {
         _fillParams = [NSMutableDictionary dictionary];
     }
     return [_fillParams mutableCopy];
 }
 
-+ (void)setFillParams:(NSMutableDictionary *)fillParams{
++ (void)setCommonParams:(NSMutableDictionary *)fillParams{
     _fillParams = [fillParams mutableCopy];
 }
 

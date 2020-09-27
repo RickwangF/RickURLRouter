@@ -60,9 +60,9 @@
     
     // 解析字符串并填充特殊参数
     if (paramsString != nil && ![paramsString isEqualToString:@""]) {
-        NSDictionary* urlParams = [self fullFillParams:paramsString];
+        NSDictionary* urlParams = [self mixCommonParams:paramsString];
         result.params = urlParams;
-        NSString* fullFillParamString = [self combineFullFillParams:urlParams];
+        NSString* fullFillParamString = [self combineAllParams:urlParams];
         if (fullFillParamString != nil && ![fullFillParamString isEqualToString:@""]) {
             NSString* fullFillUrlString = [NSString stringWithFormat:@"%@?%@", schemeHostString, fullFillParamString];
             result.url = [NSURL URLWithString:fullFillUrlString];
@@ -158,7 +158,7 @@
     if (paramsString == nil || [paramsString isEqualToString:@""]) {
         return result;
     } else {
-        NSDictionary* urlParams = [self fullFillParams:paramsString];
+        NSDictionary* urlParams = [self mixCommonParams:paramsString];
         result.params = urlParams;
     }
     
@@ -197,12 +197,12 @@
     return result;
 }
 
-- (NSDictionary*)fullFillParams:(NSString*)paramsString{
+- (NSDictionary*)mixCommonParams:(NSString*)paramsString{
     NSMutableDictionary *paramsDictionary = [NSMutableDictionary dictionary];
-    NSMutableDictionary *fullFillParamsDic = [NSMutableDictionary dictionary];
+    NSMutableDictionary *mixedParamsDic = [NSMutableDictionary dictionary];
     NSArray* componentArray = [paramsString componentsSeparatedByString:@"&"];
     if (componentArray == nil || componentArray.count == 0){
-        return [fullFillParamsDic copy];
+        return [mixedParamsDic copy];
     }
     
     [componentArray enumerateObjectsUsingBlock:^(NSString*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -219,23 +219,23 @@
     }];
     
     if (paramsDictionary.count == 0) {
-        return [fullFillParamsDic copy];
+        if (URLRouterSettings.commonParams.count > 0) {
+            [mixedParamsDic setDictionary:URLRouterSettings.commonParams];
+        }
+        return [mixedParamsDic copy];
+    }
+    
+    if (URLRouterSettings.commonParams.count > 0) {
+        [mixedParamsDic setDictionary:URLRouterSettings.commonParams];
     }
     
     [paramsDictionary enumerateKeysAndObjectsUsingBlock:^(NSString*  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-        if ([[URLRouterSettings.fillParams allKeys] containsObject:key]) {
-            id fillObj = [URLRouterSettings.fillParams objectForKey:key];
-            if (!fillObj) {
-                [fullFillParamsDic setObject:obj forKey:key];
-            } else {
-                [fullFillParamsDic setObject:fillObj forKey:key];
-            }
-        } else {
-            [fullFillParamsDic setObject:obj forKey:key];
+        if (![[mixedParamsDic allKeys] containsObject:key]) {
+            [mixedParamsDic setObject:obj forKey:key];
         }
     }];
     
-    return [fullFillParamsDic copy];
+    return [mixedParamsDic copy];
 }
 
 - (NSString *)encodeURLString:(NSString*)originString{
@@ -258,18 +258,18 @@
     return [urlString stringByRemovingPercentEncoding];
 }
 
-- (NSString*)combineFullFillParams:(NSDictionary*)fullFillParams{
-    NSMutableString* fullFillString = [NSMutableString string];
+- (NSString*)combineAllParams:(NSDictionary*)fullFillParams{
+    NSMutableString* allParamsString = [NSMutableString string];
     if (fullFillParams == nil || fullFillParams.count == 0) {
-        return [fullFillString copy];
+        return [allParamsString copy];
     }
     
     [fullFillParams enumerateKeysAndObjectsUsingBlock:^(NSString*  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-        [fullFillString appendFormat:@"%@=%@&", [self encodeURLString:key], [self encodeURLString:[obj description]]];
+        [allParamsString appendFormat:@"%@=%@&", [self encodeURLString:key], [self encodeURLString:[obj description]]];
     }];
     
-    fullFillString = [[fullFillString substringToIndex:fullFillString.length-1] mutableCopy];
-    return [fullFillString copy];
+    allParamsString = [[allParamsString substringToIndex:allParamsString.length-1] mutableCopy];
+    return [allParamsString copy];
 }
 
 @end

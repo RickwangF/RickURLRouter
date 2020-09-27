@@ -22,7 +22,8 @@ typedef NS_ENUM(NSInteger, URLRouteErrorCode) {
     URLRouteErrorCodeAnalyzeFailure,
     URLRouteErrorCodeCantFindModule,
     URLRouteErrorCodeCantFindTarget,
-    URLRouteErrorCodeTargetInitializeFailure
+    URLRouteErrorCodeTargetInitializeFailure,
+    URLRouteErrorCodeCantFindNavigationController
 };
 
 typedef NS_ENUM(NSInteger, URLRouteStyle) {

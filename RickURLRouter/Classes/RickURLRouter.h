@@ -8,7 +8,6 @@
 #ifndef RickURLRouter_h
 #define RickURLRouter_h
 
-#import "BaseRouterViewController.h"
 #import "URLRouteAnalysisResult.h"
 #import "URLRouteAnalyzer.h"
 #import "URLRouteDefaultAnalyzer.h"

@@ -1,22 +1,15 @@
 PODS:
-  - MJExtension (3.2.2)
-  - RickURLRouter (0.1.0):
-    - MJExtension
+  - RickURLRouter (0.1.0)
 
 DEPENDENCIES:
   - RickURLRouter (from `../`)
-
-SPEC REPOS:
-  trunk:
-    - MJExtension
 
 EXTERNAL SOURCES:
   RickURLRouter:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
-  RickURLRouter: 27fcda4f68073b0cebd3794b125825429d27d60f
+  RickURLRouter: b99fd623b10b9578dd12b8c62ebed9dd804e207f
 
 PODFILE CHECKSUM: 8d6d1bed65c426230814857f02ed0900b6135680
 

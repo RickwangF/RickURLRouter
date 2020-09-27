@@ -8,7 +8,6 @@
 
 #import "RICKViewController.h"
 #import <RickURLRouter/RickURLRouter.h>
-#import <MJExtension/MJExtension.h>
 
 @interface RICKViewController ()
 
@@ -61,7 +60,7 @@
     NSDictionary* moduleDictionary = @{@"live": targetsArray};
     URLRouterSettings.moduleTargets = [moduleDictionary mutableCopy];
     NSDictionary* fillParams = @{@"statusBarH": @40, @"showNaviBar": @1};
-    URLRouterSettings.fillParams = [fillParams mutableCopy];
+    URLRouterSettings.commonParams = [fillParams mutableCopy];
     URLRouterSettings.webTargetBlock = ^id<URLRouter> _Nullable(URLRouteAnalysisResult * _Nonnull result) {
         id<URLRouter> target;
         
@@ -71,7 +70,15 @@
         }
         if ([webVCClz conformsToProtocol:@protocol(URLRouter)]) {
             target = [[webVCClz alloc] init];
-            [((id<URLRouter>)target) hasReceivedRouterParams:result.params];
+            NSMutableDictionary *params = [NSMutableDictionary dictionary];
+            if (result.params != nil) {
+                [params setDictionary:result.params];
+            }
+            
+            if (![[params allKeys] containsObject:@"url"] && result.url != nil) {
+                [params setObject:result.url.absoluteString forKey:@"url"];
+            }
+            [((id<URLRouter>)target) hasReceivedRouterParams:[params mutableCopy]];
         }
         
         return target;
@@ -128,8 +135,8 @@
 //    URLRouteTargetCreateResult* createResult = [self.creator createTargetWithAnalyzedResult:result];
 //    NSLog(@"create target result is %@ and target is %@", [createResult description], createResult.target);
     
-    [URLRouterUtil routeTo:@"live" Target:@"detail" Params:@{@"id": @1} Style:URLRouteStylePush];
-    
+    // [URLRouterUtil routeToModule:@"live" Target:@"detail" Params:@{@"id": @1} Style:URLRouteStylePresentFullScreen];
+    [URLRouterUtil routeWithURLString:@"https://www.baidu.com?statusBarH=20&showNaviBar=0"];
 }
 
 @end

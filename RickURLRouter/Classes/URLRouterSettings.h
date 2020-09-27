@@ -25,7 +25,7 @@ typedef id<URLRouter>_Nullable(^CreateNativeTargetBlock)(URLRouteAnalysisResult*
 
 @property (nonatomic, copy, class) NSMutableDictionary* moduleTargets;
 
-@property (nonatomic, copy, class) NSMutableDictionary* fillParams;
+@property (nonatomic, copy, class) NSMutableDictionary* commonParams;
 
 @property (nonatomic, copy, class) CreateWebTargetBlock webTargetBlock;
 

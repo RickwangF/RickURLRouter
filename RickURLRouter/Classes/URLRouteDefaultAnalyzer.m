@@ -55,10 +55,12 @@
     NSRange range = [urlString rangeOfString:@"?" options:NSCaseInsensitiveSearch];
     if (range.location != NSNotFound) {
         schemeHostString = [urlString substringToIndex:range.location];
-        paramsString = [urlString substringFromIndex:range.location + 1];
+        if (range.location < urlString.length - 1) {
+            paramsString = [urlString substringFromIndex:range.location + 1];
+        }
     }
     
-    // 解析字符串并填充特殊参数
+    // 解析参数字符串并加入公共参数
     if (paramsString != nil && ![paramsString isEqualToString:@""]) {
         NSDictionary* urlParams = [self mixCommonParams:paramsString];
         result.params = urlParams;
@@ -68,6 +70,7 @@
             result.url = [NSURL URLWithString:fullFillUrlString];
         }
     } else {
+        result.params = URLRouterSettings.commonParams;
         result.url = url;
     }
     
@@ -99,7 +102,9 @@
     
     NSRange range = [urlString rangeOfString:@"?" options:NSCaseInsensitiveSearch];
     if (range.location != NSNotFound) {
-        paramsString = [urlString substringFromIndex:range.location + 1];
+        if (range.location < urlString.length - 1) {
+            paramsString = [urlString substringFromIndex:range.location + 1];
+        }
     }
     
     // 路由目标地解析
@@ -124,28 +129,28 @@
     }
     
     if (module == nil || [module isEqualToString:@""]) {
-        NSError *error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeInvalidRouteModule userInfo:@{NSLocalizedDescriptionKey:@"路由地址host的module不正确"}];
+        NSError *error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeEmptyModule userInfo:@{NSLocalizedDescriptionKey:@"路由module为空"}];
         result.error = error;
         return result;
     }
     
     NSArray* moduleTargets = URLRouterSettings.moduleTargets[module];
     if (moduleTargets == nil || moduleTargets.count == 0) {
-        NSError *error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeInvalidRouteModule userInfo:@{NSLocalizedDescriptionKey:@"路由地址host的module不正确"}];
+        NSError *error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeCantFindModule userInfo:@{NSLocalizedDescriptionKey:@"找不到路由的module"}];
         result.error = error;
         return result;
     }
     
     
     if (target == nil || [target isEqualToString:@""]) {
-        NSError *error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeInvalidRouteTarget userInfo:@{NSLocalizedDescriptionKey:@"路由地址host的target不正确"}];
+        NSError *error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeEmptyTarget userInfo:@{NSLocalizedDescriptionKey:@"路由target为空"}];
         result.error = error;
         return result;
     }
     
     // 查看路由目标地是否匹配
     if (![moduleTargets containsObject:target]) {
-        NSError *error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeInvalidRouteTarget userInfo:@{NSLocalizedDescriptionKey:@"路由地址host的target不正确"}];
+        NSError *error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeCantFindTarget userInfo:@{NSLocalizedDescriptionKey:@"找不到路由目标地"}];
         result.error = error;
         return result;
     }
@@ -156,6 +161,7 @@
     
     // 解析参数
     if (paramsString == nil || [paramsString isEqualToString:@""]) {
+        result.params = URLRouterSettings.commonParams;
         return result;
     } else {
         NSDictionary* urlParams = [self mixCommonParams:paramsString];

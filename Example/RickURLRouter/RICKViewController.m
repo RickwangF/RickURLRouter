@@ -136,7 +136,11 @@
 //    NSLog(@"create target result is %@ and target is %@", [createResult description], createResult.target);
     
     // [URLRouterUtil routeToModule:@"live" Target:@"detail" Params:@{@"id": @1} Style:URLRouteStylePresentFullScreen];
-    [URLRouterUtil routeWithURLString:@"https://www.baidu.com?statusBarH=20&showNaviBar=0"];
+    // [URLRouterUtil routeWithURLString:@"https://www.baidu.com?"];
+    URLRouteResult* result = [URLRouterUtil routeToURL:[NSURL URLWithString:@"jade://jd.live.detail?id=16"] Style:URLRouteStylePresentFullScreen];
+    if (result.error != nil) {
+        NSLog(@"route result error is %@", result.error.localizedDescription);
+    }
 }
 
 @end

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		09E3755F3C4F472A2DB46107 /* Pods_RickURLRouter_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A495745F2C31128218A6E3F /* Pods_RickURLRouter_Example.framework */; };
+		0F22D0F0251F70A30095753D /* JDLiveDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F22D0EF251F70A30095753D /* JDLiveDetailController.m */; };
+		0F22D0F5251F713A0095753D /* JDWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F22D0F4251F713A0095753D /* JDWebController.m */; };
 		248185A4A730BFD992120FE3 /* Pods_RickURLRouter_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B136CDF474C82A910CB8C0 /* Pods_RickURLRouter_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -37,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F22D0EE251F70A30095753D /* JDLiveDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDLiveDetailController.h; sourceTree = "<group>"; };
+		0F22D0EF251F70A30095753D /* JDLiveDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDLiveDetailController.m; sourceTree = "<group>"; };
+		0F22D0F3251F713A0095753D /* JDWebController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDWebController.h; sourceTree = "<group>"; };
+		0F22D0F4251F713A0095753D /* JDWebController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDWebController.m; sourceTree = "<group>"; };
 		2102DB13070749C792DAA0EC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2A495745F2C31128218A6E3F /* Pods_RickURLRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickURLRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4721848F820919EC42D5C00B /* Pods-RickURLRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickURLRouter_Example.debug.xcconfig"; path = "Target Support Files/Pods-RickURLRouter_Example/Pods-RickURLRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +157,10 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				0F22D0EE251F70A30095753D /* JDLiveDetailController.h */,
+				0F22D0EF251F70A30095753D /* JDLiveDetailController.m */,
+				0F22D0F3251F713A0095753D /* JDWebController.h */,
+				0F22D0F4251F713A0095753D /* JDWebController.m */,
 			);
 			name = "Example for RickURLRouter";
 			path = RickURLRouter;
@@ -369,6 +379,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F22D0F5251F713A0095753D /* JDWebController.m in Sources */,
+				0F22D0F0251F70A30095753D /* JDLiveDetailController.m in Sources */,
 				6003F59E195388D20070C39A /* RICKAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* RICKViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

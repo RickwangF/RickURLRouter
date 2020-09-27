@@ -12,10 +12,12 @@ static NSString* _prefix;
 static NSString* _moduleEntrance;
 static NSMutableDictionary* _fillParams;
 static NSMutableDictionary* _moduleTargets;
+static CreateWebTargetBlock _webTargetBlock;
+static CreateNativeTargetBlock _nativeTargetBlock;
 
 @implementation URLRouterSettings
 
-@dynamic scheme, prefix, moduleEntrance, moduleTargets, fillParams;
+@dynamic scheme, prefix, moduleEntrance, moduleTargets, fillParams, webTargetBlock, nativeTargetBlock;
 
 #pragma mar - Getter && Setter
 
@@ -72,6 +74,22 @@ static NSMutableDictionary* _moduleTargets;
 
 + (void)setFillParams:(NSMutableDictionary *)fillParams{
     _fillParams = [fillParams mutableCopy];
+}
+
++ (CreateWebTargetBlock)webTargetBlock{
+    return [_webTargetBlock copy];
+}
+
++ (void)setWebTargetBlock:(CreateWebTargetBlock)webTargetBlock{
+    _webTargetBlock = [webTargetBlock copy];
+}
+
++ (CreateNativeTargetBlock)nativeTargetBlock{
+    return [_nativeTargetBlock copy];
+}
+
++ (void)setNativeTargetBlock:(CreateNativeTargetBlock)nativeTargetBlock{
+    _nativeTargetBlock = [nativeTargetBlock copy];
 }
 
 @end

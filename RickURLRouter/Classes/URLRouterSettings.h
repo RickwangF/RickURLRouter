@@ -7,8 +7,13 @@
 
 #import <Foundation/Foundation.h>
 #import "URLRouteAnalysisResult.h"
+#import "URLRouter.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
+
+typedef id<URLRouter>_Nullable(^CreateWebTargetBlock)(URLRouteAnalysisResult* result);
+typedef id<URLRouter>_Nullable(^CreateNativeTargetBlock)(URLRouteAnalysisResult* result);
 
 @interface URLRouterSettings : NSObject
 
@@ -21,6 +26,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, class) NSMutableDictionary* moduleTargets;
 
 @property (nonatomic, copy, class) NSMutableDictionary* fillParams;
+
+@property (nonatomic, copy, class) CreateWebTargetBlock webTargetBlock;
+
+@property (nonatomic, copy, class) CreateNativeTargetBlock nativeTargetBlock;
 
 @end
 

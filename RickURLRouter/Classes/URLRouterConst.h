@@ -18,7 +18,16 @@ typedef NS_ENUM(NSInteger, URLRouteErrorCode) {
     URLRouteErrorCodeEmptyTarget,
     URLRouteErrorCodeInvalidParams,
     URLRouteErrorCodeInvalidRouteModule,
-    URLRouteErrorCodeInvalidRouteTarget
+    URLRouteErrorCodeInvalidRouteTarget,
+    URLRouteErrorCodeAnalyzeFailure,
+    URLRouteErrorCodeCantFindModule,
+    URLRouteErrorCodeCantFindTarget,
+    URLRouteErrorCodeTargetInitializeFailure
+};
+
+typedef NS_ENUM(NSInteger, URLRouteStyle) {
+    URLRouteStylePush,
+    URLRouteStylePresentFullScreen
 };
 
 extern NSString* const HTTPScheme;

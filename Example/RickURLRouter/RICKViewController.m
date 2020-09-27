@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) URLRouteDefaultAnalyzer* analyzer;
 
+@property (nonatomic, strong) URLRouteDefaultTargetCreator* creator;
+
 @property (nonatomic, strong) UIButton* testBtn;
 
 @end
@@ -27,6 +29,13 @@
         _analyzer = [[URLRouteDefaultAnalyzer alloc] init];
     }
     return _analyzer;
+}
+
+- (URLRouteDefaultTargetCreator *)creator{
+    if (!_creator) {
+        _creator = [[URLRouteDefaultTargetCreator alloc] init];
+    }
+    return _creator;
 }
 
 - (UIButton *)testBtn{
@@ -53,6 +62,37 @@
     URLRouterSettings.moduleTargets = [moduleDictionary mutableCopy];
     NSDictionary* fillParams = @{@"statusBarH": @40, @"showNaviBar": @1};
     URLRouterSettings.fillParams = [fillParams mutableCopy];
+    URLRouterSettings.webTargetBlock = ^id<URLRouter> _Nullable(URLRouteAnalysisResult * _Nonnull result) {
+        id<URLRouter> target;
+        
+        Class webVCClz = NSClassFromString(@"JDWebController");
+        if (webVCClz == Nil || webVCClz == nil) {
+            return target;
+        }
+        if ([webVCClz conformsToProtocol:@protocol(URLRouter)]) {
+            target = [[webVCClz alloc] init];
+            [((id<URLRouter>)target) hasReceivedRouterParams:result.params];
+        }
+        
+        return target;
+        
+    };
+    URLRouterSettings.nativeTargetBlock = ^id<URLRouter> _Nullable(URLRouteAnalysisResult * _Nonnull result) {
+        id<URLRouter> target;
+        
+        NSString* className = [NSString stringWithFormat:@"%@%@%@Controller", result.prefix.uppercaseString, result.module.capitalizedString, result.target.capitalizedString];
+        Class vcClz = NSClassFromString(className);
+        if (vcClz == Nil || vcClz == nil) {
+            return target;
+        }
+        
+        if ([vcClz conformsToProtocol:@protocol(URLRouter)]) {
+            target = [[vcClz alloc] init];
+            [((id<URLRouter>)target) hasReceivedRouterParams:result.params];
+        }
+        
+        return target;
+    };
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -81,10 +121,15 @@
     //NSString* urlEncodeString = [URLRouterUtil encodeURLString:urlString];
     
     // 原生链接测试
-    NSString* urlString = @"jade://jd.live.detail?id=110";
-    NSURL* url = [NSURL URLWithString:urlString];
-    URLRouteAnalysisResult* result = [self.analyzer analyzeRouteURL:url];
-    NSLog(@"analyze result is %@", [result mj_JSONString]);
+//    NSString* urlString = @"jade://jd.live.detail?id=110";
+//    NSURL* url = [NSURL URLWithString:urlString];
+//    URLRouteAnalysisResult* result = [self.analyzer analyzeRouteURL:url];
+//    NSLog(@"analyze result is %@", [result mj_JSONString]);
+//    URLRouteTargetCreateResult* createResult = [self.creator createTargetWithAnalyzedResult:result];
+//    NSLog(@"create target result is %@ and target is %@", [createResult description], createResult.target);
+    
+    [URLRouterUtil routeTo:@"live" Target:@"detail" Params:@{@"id": @1} Style:URLRouteStylePush];
+    
 }
 
 @end

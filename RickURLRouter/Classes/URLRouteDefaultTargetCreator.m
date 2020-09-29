@@ -33,17 +33,23 @@
             result.error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeTargetInitializeFailure userInfo:@{NSLocalizedDescriptionKey: @"路由目标初始化失败"}];
         }
     } else {
-        //result.target = URLRouterSettings.nativeTargetBlock(analyzed);
-        NSString* className = [NSString stringWithFormat:@"%@%@%@Controller", analyzed.prefix.uppercaseString, analyzed.module.capitalizedString, analyzed.target.capitalizedString];
-        Class vcClz = NSClassFromString(className);
-        if (vcClz == Nil || vcClz == nil) {
-            result.error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeTargetInitializeFailure userInfo:@{NSLocalizedDescriptionKey: @"路由目标初始化失败"}];
-            return result;
-        }
-        
-        if ([vcClz conformsToProtocol:@protocol(URLRouter)]) {
-            result.target = [[vcClz alloc] init];
-            [((id<URLRouter>)result.target) hasReceivedRouterParams:analyzed.params];
+        if (URLRouterSettings.nativeTargetBlock != nil) {
+            result.target = URLRouterSettings.nativeTargetBlock(analyzed);
+            if (!result.target) {
+                result.error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeTargetInitializeFailure userInfo:@{NSLocalizedDescriptionKey: @"路由目标初始化失败"}];
+            }
+        } else {
+            NSString* className = [NSString stringWithFormat:@"%@%@%@Controller", analyzed.prefix.uppercaseString, analyzed.module.capitalizedString, analyzed.target.capitalizedString];
+            Class vcClz = NSClassFromString(className);
+            if (vcClz == Nil || vcClz == nil) {
+                result.error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeTargetInitializeFailure userInfo:@{NSLocalizedDescriptionKey: @"路由目标初始化失败"}];
+                return result;
+            }
+            
+            if ([vcClz conformsToProtocol:@protocol(URLRouter)]) {
+                result.target = [[vcClz alloc] init];
+                [((id<URLRouter>)result.target) hasReceivedRouterParams:analyzed.params];
+            }
         }
     }
     

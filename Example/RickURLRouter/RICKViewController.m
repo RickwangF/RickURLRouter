@@ -137,6 +137,7 @@
     
     // [URLRouterUtil routeToModule:@"live" Target:@"detail" Params:@{@"id": @1} Style:URLRouteStylePresentFullScreen];
     // [URLRouterUtil routeWithURLString:@"https://www.baidu.com?"];
+    // URLRouteResult* result = [URLRouterUtil routeWithURLString:@"https://www.baidu.com" Style:URLRouteStylePresentFullScreen];
     URLRouteResult* result = [URLRouterUtil routeToURL:[NSURL URLWithString:@"jade://jd.live.detail?id=16"] Style:URLRouteStylePresentFullScreen];
     if (result.error != nil) {
         NSLog(@"route result error is %@", result.error.localizedDescription);

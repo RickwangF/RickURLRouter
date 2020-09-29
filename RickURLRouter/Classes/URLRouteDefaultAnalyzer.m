@@ -58,19 +58,18 @@
         if (range.location < urlString.length - 1) {
             paramsString = [urlString substringFromIndex:range.location + 1];
         }
+    } else {
+        schemeHostString = urlString;
     }
     
     // 解析参数字符串并加入公共参数
-    if (paramsString != nil && ![paramsString isEqualToString:@""]) {
-        NSDictionary* urlParams = [self mixCommonParams:paramsString];
-        result.params = urlParams;
-        NSString* fullFillParamString = [self combineAllParams:urlParams];
-        if (fullFillParamString != nil && ![fullFillParamString isEqualToString:@""]) {
-            NSString* fullFillUrlString = [NSString stringWithFormat:@"%@?%@", schemeHostString, fullFillParamString];
-            result.url = [NSURL URLWithString:fullFillUrlString];
-        }
+    NSDictionary* urlParams = [self mixCommonParams:paramsString];
+    result.params = urlParams;
+    NSString* fullFillParamString = [self combineAllParams:urlParams];
+    if (fullFillParamString != nil && ![fullFillParamString isEqualToString:@""]) {
+        NSString* fullFillUrlString = [NSString stringWithFormat:@"%@?%@", schemeHostString, fullFillParamString];
+        result.url = [NSURL URLWithString:fullFillUrlString];
     } else {
-        result.params = URLRouterSettings.commonParams;
         result.url = url;
     }
     
@@ -160,13 +159,8 @@
     result.target = target;
     
     // 解析参数
-    if (paramsString == nil || [paramsString isEqualToString:@""]) {
-        result.params = URLRouterSettings.commonParams;
-        return result;
-    } else {
-        NSDictionary* urlParams = [self mixCommonParams:paramsString];
-        result.params = urlParams;
-    }
+    NSDictionary* urlParams = [self mixCommonParams:paramsString];
+    result.params = urlParams;
     
     return result;
 }
@@ -206,8 +200,18 @@
 - (NSDictionary*)mixCommonParams:(NSString*)paramsString{
     NSMutableDictionary *paramsDictionary = [NSMutableDictionary dictionary];
     NSMutableDictionary *mixedParamsDic = [NSMutableDictionary dictionary];
+    if (paramsString == nil || [paramsString isEqualToString:@""]){
+        if (URLRouterSettings.commonParams.count > 0) {
+            [mixedParamsDic setDictionary:URLRouterSettings.commonParams];
+        }
+        return [mixedParamsDic copy];
+    }
+    
     NSArray* componentArray = [paramsString componentsSeparatedByString:@"&"];
     if (componentArray == nil || componentArray.count == 0){
+        if (URLRouterSettings.commonParams.count > 0) {
+            [mixedParamsDic setDictionary:URLRouterSettings.commonParams];
+        }
         return [mixedParamsDic copy];
     }
     

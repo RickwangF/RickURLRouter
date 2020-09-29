@@ -151,9 +151,11 @@ static id<URLRouteTargetCreator> _creator;
         return result;
     }
     
-    if (analyzed.url == nil && analyzed.module == nil && analyzed.target == nil) {
-        result.error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeInvalidRoute userInfo:@{NSLocalizedDescriptionKey: @"路由解析失败"}];
-        return result;
+    if (analyzed.url == nil) {
+        if (analyzed.module == nil || analyzed.target == nil) {
+            result.error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeInvalidRoute userInfo:@{NSLocalizedDescriptionKey: @"路由解析失败"}];
+            return result;
+        }
     }
     
     URLRouteTargetCreateResult *created = [self.creator createTargetWithAnalyzedResult:analyzed];

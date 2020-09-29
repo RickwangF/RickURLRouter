@@ -28,6 +28,11 @@
     }
     
     if (analyzed.url != nil) {
+        if (!URLRouterSettings.webTargetBlock) {
+            result.error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeTargetInitializeFailure userInfo:@{NSLocalizedDescriptionKey: @"路由目标初始化失败，请设置webTargetBlock"}];
+            return result;
+        }
+        
         result.target = URLRouterSettings.webTargetBlock(analyzed);
         if (!result.target) {
             result.error = [NSError errorWithDomain:URLRouteErrorDomain code:URLRouteErrorCodeTargetInitializeFailure userInfo:@{NSLocalizedDescriptionKey: @"路由目标初始化失败"}];

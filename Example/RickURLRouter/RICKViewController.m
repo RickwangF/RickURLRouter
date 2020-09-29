@@ -63,7 +63,7 @@
     URLRouterSettings.commonParams = [fillParams mutableCopy];
     URLRouterSettings.webTargetBlock = ^id<URLRouter> _Nullable(URLRouteAnalysisResult * _Nonnull result) {
         id<URLRouter> target;
-        
+
         Class webVCClz = NSClassFromString(@"JDWebController");
         if (webVCClz == Nil || webVCClz == nil) {
             return target;
@@ -74,15 +74,15 @@
             if (result.params != nil) {
                 [params setDictionary:result.params];
             }
-            
+
             if (![[params allKeys] containsObject:@"url"] && result.url != nil) {
                 [params setObject:result.url.absoluteString forKey:@"url"];
             }
             [((id<URLRouter>)target) hasReceivedRouterParams:[params mutableCopy]];
         }
-        
+
         return target;
-        
+
     };
     URLRouterSettings.nativeTargetBlock = ^id<URLRouter> _Nullable(URLRouteAnalysisResult * _Nonnull result) {
         id<URLRouter> target;
@@ -137,8 +137,8 @@
     
     // [URLRouterUtil routeToModule:@"live" Target:@"detail" Params:@{@"id": @1} Style:URLRouteStylePresentFullScreen];
     // [URLRouterUtil routeWithURLString:@"https://www.baidu.com?"];
-    // URLRouteResult* result = [URLRouterUtil routeWithURLString:[URLRouterUtil encodeURLString:@"https://www.baidu.com/index.html#/?statusBarH=20&showNaviBar=0&title=我的"] Style:URLRouteStylePresentFullScreen];
-    URLRouteResult* result = [URLRouterUtil routeToURL:[NSURL URLWithString:@"jade://jd.live.detail?id=16"] Style:URLRouteStylePresentFullScreen];
+     URLRouteResult* result = [URLRouterUtil routeWithURLString:[URLRouterUtil encodeURLString:@"https://www.baidu.com/index.html#/?statusBarH=20&showNaviBar=0&title=我的"] Style:URLRouteStylePresentFullScreen];
+//    URLRouteResult* result = [URLRouterUtil routeToURL:[NSURL URLWithString:@"jade://jd.live.detail?id=16"] Style:URLRouteStylePresentFullScreen];
     if (result.error != nil) {
         NSLog(@"route result error is %@", result.error.localizedDescription);
     }
